@@ -24,11 +24,7 @@ View(xmlToDataFrame(node["//GeoPosition"]))
 ####################################################
 # getTown via POST cityid
 ####################################################
-# connector
-res = POST("http://emap.pcsc.com.tw/EMapSDK.aspx",
-           body=list(commandid="GetTown",cityid="01"))
 
-# parser
 node = xmlParse(content(res,as="text"))
 View(xmlToDataFrame(node["//GeoPosition"]))
 
